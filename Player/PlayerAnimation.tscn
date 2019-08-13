@@ -28,5 +28,6 @@ animations = [ {
 [node name="PlayerAnimation" type="AnimatedSprite"]
 frames = SubResource( 1 )
 animation = "walk"
+frame = 1
 playing = true
 script = ExtResource( 6 )

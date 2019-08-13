@@ -6,6 +6,7 @@ const SPEED = 1500
 const GRAVITY = 300
 const UP = Vector2(0, -1)
 const JUMP_SPEED = 4000
+const WORLD_LIMIT = 3000
 
 signal animate
 
@@ -17,6 +18,9 @@ func _physics_process(delta):
 	motion = move_and_slide(motion, UP)
 	
 func apply_gravity():
+	if position.y > WORLD_LIMIT:
+		end_game()
+	
 	if is_on_ceiling():
 		motion.y = 1
 	else:
@@ -36,3 +40,6 @@ func move():
 
 func animate():
 	emit_signal("animate", motion)
+	
+func end_game():
+	get_tree().change_scene("res://Levels/GameOver.tscn")

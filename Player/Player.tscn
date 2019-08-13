@@ -24,7 +24,6 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="PlayerAnimation" parent="." instance=ExtResource( 2 )]
-frame = 0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 500, 0 )

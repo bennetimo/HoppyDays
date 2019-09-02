@@ -26,7 +26,6 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="PlayerAnimation" parent="." instance=ExtResource( 2 )]
-frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 editor/display_folded = true

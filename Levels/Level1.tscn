@@ -1,14 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://Hazards/SpikeTop.tscn" type="PackedScene" id=4]
 [ext_resource path="res://NPCs/Spikeman.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Items/Coin.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Items/JumpPad.tscn" type="PackedScene" id=7]
-[ext_resource path="res://SFX/Chiptune_Adventures_1.ogg" type="AudioStream" id=8]
-[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://NPCs/Cloud.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Items/Coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/JumpPad.tscn" type="PackedScene" id=8]
+[ext_resource path="res://SFX/Chiptune_Adventures_1.ogg" type="AudioStream" id=9]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=10]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
@@ -46,63 +47,75 @@ position = Vector2( 1110, 640 )
 [node name="Spikeman2" parent="NPCs" instance=ExtResource( 5 )]
 position = Vector2( 2960, 1160 )
 
+[node name="Cloud" parent="NPCs" instance=ExtResource( 6 )]
+position = Vector2( 2570, 50 )
+
+[node name="Cloud2" parent="NPCs" instance=ExtResource( 6 )]
+position = Vector2( 720, -80 )
+
+[node name="Cloud3" parent="NPCs" instance=ExtResource( 6 )]
+position = Vector2( 3590, 170 )
+
+[node name="Cloud4" parent="NPCs" instance=ExtResource( 6 )]
+position = Vector2( 4010, -90 )
+
 [node name="Coins" type="Node" parent="."]
 editor/display_folded = true
 
-[node name="Coin" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 1270, 660 )
 
-[node name="Coin2" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin2" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 1820, 1100 )
 
-[node name="Coin3" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin3" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 2400, 1300 )
 
-[node name="Coin4" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin4" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 3490, 520 )
 
-[node name="Coin11" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin11" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 5060, 980 )
 
-[node name="Coin12" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin12" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 5130, 280 )
 
-[node name="Coin13" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin13" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 4160, 1280 )
 
-[node name="Coin14" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin14" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 4290, 1280 )
 
-[node name="Coin5" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin5" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 3200, 89 )
 
-[node name="Coin6" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin6" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 1700, 1100 )
 
-[node name="Coin7" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin7" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 60, 340 )
 
-[node name="Coin8" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin8" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 760, 530 )
 
-[node name="Coin9" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin9" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 760, 640 )
 
-[node name="Coin10" parent="Coins" instance=ExtResource( 6 )]
+[node name="Coin10" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 760, 770 )
 
 [node name="JumpPads" type="Node" parent="."]
 editor/display_folded = true
 
-[node name="JumpPad" parent="JumpPads" instance=ExtResource( 7 )]
+[node name="JumpPad" parent="JumpPads" instance=ExtResource( 8 )]
 position = Vector2( 760, 880 )
 
-[node name="JumpPad2" parent="JumpPads" instance=ExtResource( 7 )]
+[node name="JumpPad2" parent="JumpPads" instance=ExtResource( 8 )]
 position = Vector2( 3850, 2090 )
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
+stream = ExtResource( 9 )
 volume_db = -3.0
 autoplay = true
 
-[node name="GUI" parent="." instance=ExtResource( 9 )]
+[node name="GUI" parent="." instance=ExtResource( 10 )]

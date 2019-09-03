@@ -26,7 +26,6 @@ func apply_gravity():
 		motion.y = 1
 	else:
 		motion.y += GRAVITY
-#	else: motion.y = 0
 	
 func jump():
 	if Input.is_action_pressed("jump") and is_on_floor():
@@ -44,7 +43,7 @@ func animate():
 	emit_signal("animate", motion)
 	
 func hurt():
-	motion.y -= JUMP_SPEED	
+	motion.y = -JUMP_SPEED	
 	$PainSFX.play()
 #	if lives < 0:
 #		end_game()

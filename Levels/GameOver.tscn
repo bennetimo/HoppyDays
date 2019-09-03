@@ -39,7 +39,7 @@ margin_bottom = 425.0
 margin_right = 773.0
 margin_bottom = 164.0
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0.419608, 0.0941176, 0.945098, 1 )
+custom_colors/font_color = Color( 0.0509804, 0.443137, 0.756863, 1 )
 text = "Game Over!"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
@@ -59,6 +59,6 @@ margin_left = 237.0
 margin_right = 591.0
 margin_bottom = 82.0
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.419608, 0.0941176, 0.945098, 1 )
+custom_colors/font_color = Color( 0.0509804, 0.443137, 0.756863, 1 )
 text = "Try again?"
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
